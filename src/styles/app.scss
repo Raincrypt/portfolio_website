@@ -1,0 +1,26 @@
+@import "statics";
+@import "animations";
+@import "header";
+@import "home";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: $text1;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $color1;
+    overflow-x: hidden;
+}
+
+.disableBtn{
+    background-color: rgb(237, 237, 237);
+    cursor: not-allowed;
+}

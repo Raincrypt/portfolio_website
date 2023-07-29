@@ -1,0 +1,108 @@
+@import "statics";
+
+#home{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+
+    >section{
+        width: 100%;
+        // for right side content
+        &:first-of-type{
+            display: grid;
+            grid-template-columns: 1fr;
+            padding-left: $p;
+            > div{
+                border-top: 1px solid $color6_2;
+                height: 100%;
+                padding-top: 6rem;
+                > h1{
+                    font: 900 4rem $text1;
+                }
+
+                .typewriterpara{
+                    margin-block: 10px;
+                    height: 20px;
+                    letter-spacing: 5px;
+                }
+
+                // To style the cursor for the typewriter effect
+                // .typewriter-cursor{
+                //     margin-left: 100px; 
+                // }
+
+                > div{
+                    display: flex;
+                    align-items: center;
+                    gap: 4rem;
+                    margin-block: 5rem 0;
+                    width: 70%;
+
+                    > .hire-me-btn{
+                        background-color: $color3;
+                        color: $color1;
+                        padding: 1rem 2.5rem;
+                        transition: all 0.3s;
+                        &:hover{
+                            background-color: $color3_1;
+                        }
+                    }
+                    
+                    > .project-btn{
+                        font: 600 1.2rem $text2;
+                        color: $color5;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                > div {
+                    overflow-x: hidden;
+                    width: 70%;
+                    .resume-btn{
+                        display: flex;
+                        justify-content: center;
+                        background-color: $color3;
+                        color: $color1;
+                        width: 100%;
+                        padding: 1rem 2.5rem;
+                        transition: all 0.3s;
+                        &:hover{
+                            background-color: $color3_1;
+                        }
+                    }
+                }
+            }
+        }
+
+        // For Left Image
+        &:last-of-type{
+            border-top: 1px solid $color6_2;
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+
+            > img{
+                width: 40vmax;
+                height: 40vmax;
+                object-fit: cover;
+            }
+        }
+    }
+    
+    >svg{
+        position: absolute;
+        font-size: 4rem;
+        color: $color5;
+        left: 50%;
+        bottom: 0;
+
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        animation: animateDownBtn 0.7s infinite linear alternate;
+
+        &:hover{
+            color: $color3;
+        }
+    }
+}
