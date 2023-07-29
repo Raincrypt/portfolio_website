@@ -16,6 +16,9 @@ const Contact = () => {
         e.preventDefault();
         try{
             await addDoc(collection(db, "contacts"), {name, email, message})
+            setName("")
+            setEmail("")
+            setMessage("")
             toast.success("Message Send")
             setDisableBtn(false)
         }
