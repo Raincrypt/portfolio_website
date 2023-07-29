@@ -3,6 +3,7 @@ import vg from "../../assets/vg.png";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import { addDoc, collection } from "firebase/firestore";
+import {db} from "../../firebase"
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -10,9 +11,18 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [disableBtn, setDisableBtn] = useState(false);
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
+        setDisableBtn(true)
         e.preventDefault();
-        toast.success("Message Send")
+        try{
+            await addDoc(collection(db, "contacts"), {name, email, message})
+            toast.success("Message Send")
+            setDisableBtn(false)
+        }
+        catch(error){
+            toast.error("Error")
+            setDisableBtn(false)
+        }
     };
 
     const animations = {

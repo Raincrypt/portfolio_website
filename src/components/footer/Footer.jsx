@@ -24,13 +24,13 @@ const Footer = () => {
           <h2>Social Media</h2>
 
           <article>
-            <a href={data.personalInfo.linkedin} target={"blank"}>
+            <a href={data.personalInfo.linkedin} target={"_blank"}>
               <AiFillLinkedin />
             </a>
-            <a href={data.personalInfo.github} target={"blank"}>
+            <a href={data.personalInfo.github} target={"_blank"}>
               <AiFillGithub />
             </a>
-            <a href={data.personalInfo.instagram} target={"blank"}>
+            <a href={data.personalInfo.instagram} target={"_blank"}>
               <AiFillInstagram />
             </a>
           </article>
