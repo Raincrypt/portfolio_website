@@ -9,8 +9,7 @@
         width: 100%;
         // for right side content
         &:first-of-type{
-            display: grid;
-            grid-template-columns: 1fr;
+            
             padding-left: $p;
             > div{
                 border-top: 1px solid $color6_2;
