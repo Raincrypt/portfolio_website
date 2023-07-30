@@ -17,7 +17,7 @@ const Work = () => {
                     showStatus={false}
                     showThumbs={false}
                     interval={2000}
-                    autoPlay={true}
+                    
                     infiniteLoop={true}
                 >
                     {

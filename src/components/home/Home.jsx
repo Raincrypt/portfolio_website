@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion"
 import Typewriter from "typewriter-effect"
-import { BsArrowUpRight, BsChevronDown } from "react-icons/bs"
+import { BsArrowUpRight } from "react-icons/bs"
 
 import myImage from "../../assets/Portfolio-img.png"
 import myResume from "../../assets/mousom_resume.pdf"
@@ -81,8 +81,6 @@ const Home = () => {
             <section>
                 <img src={myImage} alt='My Image'/>
             </section>
-            
-            <BsChevronDown />
         </div>
     )
 }

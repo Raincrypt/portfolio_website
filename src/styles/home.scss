@@ -12,7 +12,6 @@
             
             padding-left: $p;
             > div{
-                border-top: 1px solid $color6_2;
                 height: 100%;
                 padding-top: 6rem;
                 > h1{
@@ -76,11 +75,10 @@
 
         // For Left Image
         &:last-of-type{
-            border-top: 1px solid $color6_2;
+
             display: flex;
             align-items: center;
             overflow-x: hidden;
-
             > img{
                 width: 40vmax;
                 height: 40vmax;
