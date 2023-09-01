@@ -6,9 +6,10 @@ import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 function App() {
-  return (
+  return(
     <>
       <Header/>
       <Home/>
@@ -19,7 +20,7 @@ function App() {
       <Footer/>
       <Toaster/>
     </>
-  );
+  )
 }
 
 export default App;

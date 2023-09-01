@@ -6,7 +6,7 @@ const NavContent = () => {
         <h2>Mousom.</h2>
         <div className='nav-menu'>
             <a href='#home'>home</a>
-            <a href='#work'>work</a>
+            <a href='#work'>experience</a>
             <a href='#timeline'>timeline</a>
             <a href='#services'>skills</a>
             <a href='#contact'>contact</a>

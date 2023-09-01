@@ -12,7 +12,6 @@ const WorkTab = ({companyName, jt, jd, startDate, endDate}) => {
             </div>
             <div className='experience-tab-extend'>
                 <p>{jd}</p>
-                
             </div>
         </article>
     )

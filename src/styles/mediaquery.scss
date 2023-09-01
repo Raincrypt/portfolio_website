@@ -178,8 +178,8 @@
     
     @media screen and (max-width: 815px) {
         nav {
-            justify-content: center;
-            > div, a {
+            justify-content: space-around;
+            div > a{
               display: none;
             }
           }
@@ -292,9 +292,10 @@
           .project-heading{
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.5rem;
             padding-left: 3rem;
             h2{
+              font-size: x-large;
               position: unset;
             }
           }
@@ -317,6 +318,24 @@
         .right-timeline {
           &::after {
             left: 15px;
+          }
+        }
+      }
+
+      #services {
+        > section {
+          grid-template-columns: 1fr;
+          .service-box-1 {
+            grid-column: unset;
+          }
+    
+          .service-box-4 {
+            grid-column: unset;
+            > div{
+              > i{
+                font-size: 2.5rem;
+              }
+            }
           }
         }
       }

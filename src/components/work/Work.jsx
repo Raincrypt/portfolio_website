@@ -6,7 +6,6 @@ import WorkTab from './WorkTab';
 
 const Work = () => {
     const {experience} = data;
-    console.log(experience)
     return (
         <div id='work'>
             <section>
@@ -15,6 +14,7 @@ const Work = () => {
                     experience.map((job) => {
                         return (
                             <WorkTab
+                                key={job.companyName}
                                 companyName={job.companyName}
                                 jt={job.jobTitle}
                                 jd={job.jobDescription}

@@ -81,7 +81,7 @@ const Services = () => {
                     {
                         myResume.personalInfo.personalSkills.map((skill) => {
                             return (
-                                <div className="icon-container">
+                                <div className="icon-container" key={skill.skill}>
                                     <i className={skill.img} style={{color: `${skill.color}`}}></i>
                                     <span>{skill.skill}</span>
                                 </div>
