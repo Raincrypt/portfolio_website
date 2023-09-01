@@ -1,71 +1,51 @@
 #work {
     width: 100%;
-    height: 100vh;
-    padding: 8rem $p;
-    > h2 {
-        font: 700 2.5rem $text2;
-        width: fit-content;
-        border-bottom: 1px solid $color6_1;
-        padding: 0.5rem;
-        margin: auto;
-    }
-  
+    padding-inline: $p;
+    padding-top: 3rem;
+    // Container for all the job tabs
     > section {
-        margin-block: 4rem 0;
-        width: 100%;
-        height: 100%;
+        height: fit-content;
+        margin-top: 3rem;
         background-color: $color5;
+        padding: 3rem;
         display: flex;
-        align-items: center;
+        gap: 0.2rem;
+        flex-direction: column;
         justify-content: center;
-    
-        > article {
-            width: 70%;
-            height: 25vmax;
+        align-items: center;
+
+        h3{
+            color: $color1;
+            font-size: xx-large;
+            padding-bottom: 3rem;
         }
-    
-        .project-item {
-            overflow-y: auto;
-            height: 25vmax;
-            width: 95%;
-            margin: auto;
-            background-color: $color4;
-            display: flex;
-            padding: 2rem;
-            box-shadow: 0 0 20px 5px $color1;
-    
-            > img {
-                border-radius: 20px;
-                width: 40%;
-                object-fit: cover;
-            }
-    
-            > aside {
-                width: 60%;
-                height: 100%;
+
+        // Job Tab
+        .experience-container{
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: $color1;
+            border-radius: 0 5px;
+            .experience-tab{
+                text-transform: uppercase;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-left: 2rem;
-                > h3{
-                    margin-bottom: 2rem;
+                justify-content: space-between;
+                > div{
+                    width: 45%;
+                    display: flex;
+                    justify-content: space-between;
                 }
-                > p {
-                    display: contents;
-                    letter-spacing: 3px;
-                    line-height: 120%;
-                    padding: 2rem 0 0 2rem;
-                }
-                > a {
-                    background-color: $color3;
-                    padding: 0.7rem 2rem;
-                    margin-top: 2rem;
-                    color: $color4;
-                    transition: all 0.5s;
-                    &:hover {
-                        background-color: $color3_1;
-                    }
+            }
+            .experience-tab-extend{
+                margin: 1rem 0;
+                display: none;
+                color: $color5;
+            }
+
+            &:hover{
+                background-color: $color4;
+                .experience-tab-extend{
+                    display: block;
                 }
             }
         }

@@ -5,6 +5,10 @@ const Timeline = () => {
   return (
     <div id="timeline">
       <div className="timeline-box">
+      <div className="project-heading">
+        <h2 className="project-heading1">PROJECTS</h2>
+        <h2 className="project-heading2">TIMELINE</h2>
+      </div>
         {
           data.projects.map((item, index) => (
             <TimelineItem

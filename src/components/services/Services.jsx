@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from "framer-motion"
-import { AiFillIeCircle, AiFillAndroid, AiFillWindows } from "react-icons/ai"
+import { AiFillIeCircle, AiFillWindows } from "react-icons/ai"
+import myResume from "../../assets/data.json"
 
 const Services = () => {
 
@@ -35,7 +36,7 @@ const Services = () => {
 
     return (
         <div id='services'>
-            <h2>Services</h2>
+            <h2>SKILLS</h2>
 
             <section>
                 <motion.div 
@@ -44,9 +45,10 @@ const Services = () => {
                     initial={animations.one} 
                     whileHover={animations.whileHover}
                 >
-                    <h3>Fresher</h3>
+                    <h3>Skills</h3>
                     <p></p>
                 </motion.div>
+
                 <motion.div 
                     className='service-box-2'
                     whileInView={animations.whileInView} 
@@ -56,6 +58,7 @@ const Services = () => {
                     <AiFillIeCircle/>
                     <span>Web Development</span>
                 </motion.div>
+
                 <motion.div 
                     className='service-box-3' 
                     whileInView={animations.whileInView} 
@@ -65,17 +68,26 @@ const Services = () => {
                         delay:0.3,
                     }}
                 >
-                    <AiFillAndroid />
+                    <AiFillWindows />
                     <span>Software Developer</span>
                 </motion.div>
+
                 <motion.div 
                     className='service-box-4' 
                     whileInView={animations.whileInView} 
                     initial={animations.four} 
                     whileHover={animations.whileHover}
                 >
-                    <AiFillWindows />
-                    <span>Ui/Ux Designing</span>
+                    {
+                        myResume.personalInfo.personalSkills.map((skill) => {
+                            return (
+                                <div className="icon-container">
+                                    <i className={skill.img} style={{color: `${skill.color}`}}></i>
+                                    <span>{skill.skill}</span>
+                                </div>
+                            )
+                        })
+                    }
                 </motion.div>
             </section>
 

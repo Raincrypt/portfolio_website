@@ -6,7 +6,7 @@
     }
 
     #home{
-        height: 100vh;
+        height: 90vh;
         >section{
             &:first-of-type{
                 padding-left: $p_md;
@@ -18,26 +18,7 @@
     }
 
     #work{
-        padding: 8rem $p_md;
-        height: 110vh;
-        > section{
-            > article{
-                height: 20rem;
-                width: 90%;
-            }
-            > .project-item{
-                padding: 2rem;
-                height: 20rem;
-                > aside{
-                    > p{
-                        margin: 1rem;
-                    }
-                    >a{
-                        margin-top: 0;
-                    }
-                }
-            }
-        }
+        padding-inline: $p_md;
     }
 
     #services {
@@ -90,12 +71,17 @@
       }
     
       #work {
-        padding: 8rem $p_base;
+        padding-inline: $p_base;
       }
     
       #services {
         padding: $p_base_inverse;
         text-align: center;
+        section{
+          .service-box-4{
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
       }
     }
     
@@ -106,6 +92,9 @@
           font-size: 1.8rem;
         }
         > div {
+          gap: 1rem;
+        }
+        .nav-menu{
           gap: 1rem;
         }
       }
@@ -123,6 +112,7 @@
             }
           }
           &:last-of-type{
+            height: 60vh;
             padding-top: 8rem;
             align-items: flex-start;
           }
@@ -130,15 +120,11 @@
       }
     
       #work {
-        padding: 8rem $p_zero;
-        > section {
-          > article {
-            height: 25rem;
-          }
-          .project-item {
-            height: 25rem;
-          }
-        }
+        padding-inline: $p_zero;
+        
+      }
+      .experience-tab{
+        font-size: small;
       }
     
       #services {
@@ -198,6 +184,71 @@
             }
           }
 
+          #home {
+            height: unset;
+            flex-direction: column-reverse;
+        
+            > section {
+              &:first-of-type {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+        
+                > div {
+                  border: none;
+                  padding-top: 3rem;
+                  > h1 {
+                    font: 900 2.5rem $text1;
+                  }
+                  > div {
+                    flex-direction: column;
+                    margin-top: 15px;
+                  }
+                  > .hire-me-btn{
+                    margin-top: 0;
+                  }
+                  aside {
+                    align-items: center;
+                  }
+        
+                  article[data-special] {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span {
+                      display: block;
+                      width: 70%;
+                      word-wrap: break-word;
+                    }
+                  }
+        
+                  article {
+                    width: 100%;
+                    text-align: center;
+                    &::after {
+                      top: 0;
+                      left: 0%;
+                    }
+                  }
+                }
+              }
+        
+              &:last-of-type {
+                justify-content: center;
+                padding-bottom: 0;
+                height: auto;
+                padding-top: 0;
+              }
+            }
+        
+            > svg {
+              font-size: 2rem;
+              bottom: 12%;
+            }
+          }
+
           #services {
             > section {
               margin: 3rem 0;
@@ -219,106 +270,36 @@
       .navBtn {
         display: block;
       }
+
+      .experience-tab{
+        div{
+          width: 70%;
+        }
+      }
     }
     
     @media screen and (max-width: 600px) {
-      #home {
-        height: unset;
-        flex-direction: column-reverse;
-    
-        > section {
-          &:first-of-type {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-    
-            > div {
-              border: none;
-              padding-top: 3rem;
-              > h1 {
-                font: 900 2.5rem $text1;
-              }
-              > div {
-                flex-direction: column;
-                margin-top: 15px;
-              }
-              > .hire-me-btn{
-                margin-top: 0;
-              }
-              aside {
-                align-items: center;
-              }
-    
-              article[data-special] {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                span {
-                  display: block;
-                  width: 70%;
-                  word-wrap: break-word;
-                }
-              }
-    
-              article {
-                width: 100%;
-                text-align: center;
-                &::after {
-                  top: 0;
-                  left: 0%;
-                }
-              }
-            }
-          }
-    
-          &:last-of-type {
-            justify-content: center;
-            padding-bottom: 0;
-          }
-        }
-    
-        > svg {
-          font-size: 2rem;
-          bottom: 12%;
-        }
-      }
-    
-      #work {
-        > section {
-          > article {
-            width: 100%;
-            height: 30vmax;
-          }
-          .project-item {
-            height: 30vmax;
-            box-shadow: 0 0 5px $color1;
-            > aside {
-              padding-left: 1rem;
-    
-              > h3 {
-                margin: 1rem;
-              }
-    
-              > p {
-                letter-spacing: 0;
-                line-height: unset;
-                margin: 0%;
-                font-size: 0.75rem;
-              }
-    
-              > a {
-                padding: 0.4rem 0.7rem;
-                font-size: 0.7rem;
-                margin: 1rem;
-              }
-            }
-          }
+      .experience-tab{
+        align-items: center;
+        > div{
+          flex-direction: column;
         }
       }
     
       #timeline {
+        height: 50rem;
+        .timeline-box{
+          .project-heading{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding-left: 3rem;
+            h2{
+              position: unset;
+            }
+          }
+        }
+
         .timeline-box::after {
           left: 31px;
         }

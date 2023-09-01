@@ -13,7 +13,7 @@ const Footer = () => {
         <div>
           <img
             src={data.personalInfo.image}
-            alt="Founder"
+            alt="Created By"
           />
 
           <h2>{data.personalInfo.name}</h2>

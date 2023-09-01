@@ -1,42 +1,32 @@
 import React from 'react'
-import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 import data from "../../assets/data.json"
+import WorkTab from './WorkTab';
 
 const Work = () => {
-  return (
-    <div id='work'>
-        <h2>WORK</h2>
-        <section>
-            
-            <article>
-                <Carousel
-                    showArrows={false}
-                    showIndicators={false}
-                    showStatus={false}
-                    showThumbs={false}
-                    interval={2000}
-                    
-                    infiniteLoop={true}
-                >
-                    {
-                        data.projects.map((i) => (
-                            <div key={i.title} className='project-item'>
-                                <img src={i.imgSrc} alt={i.title} />
-                                <aside>
-                                    <h3>{i.title}</h3>
-                                    <p>{i.description}</p>
-                                    <a href={i.url} target='_blank'>View Demo</a>
-                                </aside>
-                            </div>
-                        ))
-                    }
-                </Carousel>
-            </article>
-        </section>
-    </div>
-  )
+    const {experience} = data;
+    console.log(experience)
+    return (
+        <div id='work'>
+            <section>
+                <h3>EXPERIENCE</h3>
+                {
+                    experience.map((job) => {
+                        return (
+                            <WorkTab
+                                companyName={job.companyName}
+                                jt={job.jobTitle}
+                                jd={job.jobDescription}
+                                startDate={job.startDate}
+                                endDate={job.endDate}
+                            />
+                        )
+                    })
+                }
+            </section>
+        </div>
+    )
 }
 
 export default Work
