@@ -63,6 +63,7 @@
             }
         }
 
+        // circles on the line
         &::after{
             position: absolute;
 
@@ -81,6 +82,19 @@
             padding: 20px 30px;
             background-color: $color5;
             color: $color1;
+        }
+
+        > a{
+            font-size: 0.8rem;
+            color: $color1;
+            font-weight: 700;
+            border-radius: 5px;
+            padding: 0.5rem;
+            background-color: $color3;
+            transition: $transision1btn;
+            &:hover{
+                background-color: $color3_1;
+            }
         }
     }
 }

@@ -26,10 +26,12 @@
             padding: 1rem 2rem;
             background-color: $color1;
             border-radius: 0 5px;
+            transition: all 0.5s ease;
             .experience-tab{
                 text-transform: uppercase;
                 display: flex;
                 justify-content: space-between;
+                
                 > div{
                     width: 45%;
                     display: flex;
@@ -37,15 +39,19 @@
                 }
             }
             .experience-tab-extend{
-                margin: 1rem 0;
-                display: none;
-                color: $color5;
+                overflow: hidden;
+                height: 0;
+                color: $color1;
+                display: block;
+                transition: all 0.5s ease;
             }
 
             &:hover{
                 background-color: $color4;
                 .experience-tab-extend{
-                    display: block;
+                    color: $color5;
+                    margin: 1rem 0;
+                    height: fit-content;
                 }
             }
         }

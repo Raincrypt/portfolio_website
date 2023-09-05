@@ -12,6 +12,7 @@ const Timeline = () => {
         {
           data.projects.map((item, index) => (
             <TimelineItem
+              projectURL={item.url}
               heading={item.title}
               date={item.date}
               index={index}
@@ -24,7 +25,7 @@ const Timeline = () => {
   );
 };
 
-const TimelineItem = ({ heading, date, index }) => (
+const TimelineItem = ({ heading, date, index, projectURL}) => (
   <div
     className={`timeline-item ${
       index % 2 === 0 ? "left-timeline" : "right-timeline"
@@ -34,6 +35,7 @@ const TimelineItem = ({ heading, date, index }) => (
       <h2>{heading}</h2>
       <p>{date}</p>
     </div>
+    <a href={projectURL} target='_blank'>VIEW DEMO</a>
   </div>
 );
 
