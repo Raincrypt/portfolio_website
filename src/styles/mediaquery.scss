@@ -323,13 +323,17 @@
       }
 
       #services {
+        height: fit-content;
+        padding-block: 2rem;
         > section {
           grid-template-columns: 1fr;
+          gap: 2rem;
           .service-box-1 {
             grid-column: unset;
           }
     
           .service-box-4 {
+            margin: 0;
             grid-column: unset;
             > div{
               > i{

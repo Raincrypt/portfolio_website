@@ -74,10 +74,10 @@
       "imgSrc": "https://placehold.co/600x400"
     },
     {
-      "date": "Ongoing",
-      "title": "Food Blog Website",
-      "description": "Developed a blog Website for food items using React, SCSS and Contentful CMS.",
-      "url": "https://react-portfolio-website-raincrypt.vercel.app/",
+      "date": "Aug 23",
+      "title": "Netflix Clone",
+      "description": "Developed a Netflix Clone Website that has working user authentication and add movie to favourite feature using React, Tailwind and Firebase.",
+      "url": "https://netflix-clone-raincrypt.netlify.app/",
       "imgSrc": "https://placehold.co/600x400"
     }
   ],

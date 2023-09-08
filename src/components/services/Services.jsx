@@ -1,9 +1,48 @@
 import React from 'react'
-import {motion} from "framer-motion"
-import { AiFillIeCircle, AiFillWindows } from "react-icons/ai"
+import {color, motion} from "framer-motion"
+import { AiFillHtml5, AiFillIeCircle, AiFillWindows } from "react-icons/ai"
+import { BiLogoCss3, BiLogoFirebase, BiLogoJavascript, BiLogoShopify, BiLogoTailwindCss } from 'react-icons/bi'
+import { FaSass } from 'react-icons/fa'
+import { SiContentful } from 'react-icons/si'
 import myResume from "../../assets/data.json"
+import IconContainer from './IconContainer'
 
 const Services = () => {
+
+    const skills = [
+        {
+            name: 'HTML',
+            icon: <AiFillHtml5 className='skill_logo'/>,
+        },
+        {
+            name: 'CSS',
+            icon: <BiLogoCss3 className='skill_logo'/>,
+        },
+        {
+            name: 'Javascript',
+            icon: <BiLogoJavascript className='skill_logo'/>,
+        },
+        {
+            name: 'Tailwind',
+            icon: <BiLogoTailwindCss className='skill_logo'/>,
+        },
+        {
+            name: 'Sass',
+            icon: <FaSass className='skill_logo'/>,
+        },
+        {
+            name: 'Firebase',
+            icon: <BiLogoFirebase className='skill_logo'/>,
+        },
+        {
+            name: 'Contentful',
+            icon: <SiContentful className='skill_logo'/>,
+        },
+        {
+            name: 'Shopify',
+            icon: <BiLogoShopify className='skill_logo'/>,
+        },
+    ]
 
     const animations = {
             whileInView: {
@@ -79,12 +118,9 @@ const Services = () => {
                     whileHover={animations.whileHover}
                 >
                     {
-                        myResume.personalInfo.personalSkills.map((skill) => {
+                        skills.map((skill) => {
                             return (
-                                <div className="icon-container" key={skill.skill}>
-                                    <i className={skill.img} style={{color: `${skill.color}`}}></i>
-                                    <span>{skill.skill}</span>
-                                </div>
+                                <IconContainer icon={skill.icon} skill={skill.name}/>
                             )
                         })
                     }
