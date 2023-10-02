@@ -1,9 +1,9 @@
 import React from 'react'
 import {color, motion} from "framer-motion"
 import { AiFillHtml5, AiFillIeCircle, AiFillWindows } from "react-icons/ai"
-import { BiLogoCss3, BiLogoFirebase, BiLogoJavascript, BiLogoShopify, BiLogoTailwindCss } from 'react-icons/bi'
+import { BiLogoCss3, BiLogoFirebase, BiLogoJavascript, BiLogoShopify, BiLogoTailwindCss, BiLogoTypescript } from 'react-icons/bi'
 import { FaSass } from 'react-icons/fa'
-import { SiContentful } from 'react-icons/si'
+import { SiContentful, SiNextdotjs } from 'react-icons/si'
 import myResume from "../../assets/data.json"
 import IconContainer from './IconContainer'
 
@@ -41,6 +41,14 @@ const Services = () => {
         {
             name: 'Shopify',
             icon: <BiLogoShopify className='skill_logo'/>,
+        },
+        {
+            name: 'Next',
+            icon: <SiNextdotjs className='skill_logo'/>,
+        },
+        {
+            name: 'Typescript',
+            icon: <BiLogoTypescript className='skill_logo'/>,
         },
     ]
 

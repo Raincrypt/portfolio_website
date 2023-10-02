@@ -33,7 +33,7 @@
         "color": "#0080ff"
       },      
       {
-        "skill": "NPM",
+        "skill": "Typescript",
         "img": "fa-brands fa-npm",
         "color": "#ff8000"
       },
@@ -77,6 +77,13 @@
       "date": "Aug 23",
       "title": "Netflix Clone",
       "description": "Developed a Netflix Clone Website that has working user authentication and add movie to favourite feature using React, Tailwind and Firebase.",
+      "url": "https://netflix-clone-raincrypt.netlify.app/",
+      "imgSrc": "https://placehold.co/600x400"
+    },
+    {
+      "date": "Oct 23",
+      "title": "Nector",
+      "description": "Developed a Social Media Website that has working user authentication using React, Tailwind and Firebase.",
       "url": "https://netflix-clone-raincrypt.netlify.app/",
       "imgSrc": "https://placehold.co/600x400"
     }
